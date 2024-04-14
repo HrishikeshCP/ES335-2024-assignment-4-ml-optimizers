@@ -14,9 +14,9 @@ for subdir in subdirs:
 		newdir = dataset_home + subdir + labldir
 		makedirs(newdir, exist_ok=True)
 # seed random number generator
-seed(1)
+# seed(1)
 # define ratio of pictures to use for validation
-val_ratio = 0.25
+val_ratio = 0.20
 # copy training dataset images into subdirectories
 src_directory = 'q1/dataset/'
 for file in listdir(src_directory):
