@@ -1,7 +1,7 @@
 import os
 
-folder_path = "D:\iitgn\sem8\ml\ES335-2024-assignment-4-ml-optimizers\dataset\Rabbit"  # Replace this with the path to your folder
-prefix = "rabbit_"
+folder_path = "q1\dataset\monkey"  # Replace this with the path to your folder
+prefix = "monkey_"
 
 # List all files in the folder
 files = os.listdir(folder_path)
