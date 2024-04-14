@@ -25,5 +25,5 @@ photos = asarray(photos)
 labels = asarray(labels)
 print(photos.shape, labels.shape)
 # save the reshaped photos
-save('q1/monkey_vs_rabbit_labels.npy', photos)
+save('q1/monkey_vs_rabbit_photos.npy', photos)
 save('q1/monkey_vs_rabbit_labels.npy', labels)

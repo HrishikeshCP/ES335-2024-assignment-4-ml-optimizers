@@ -3,7 +3,7 @@ from bing_image_downloader import downloader
 from PIL import Image
 
 # Function to download images
-def download_images(keyword, output_dir, limit=100):
+def download_images(keyword, output_dir, limit=130):
     images = downloader.download(keyword, limit=limit, output_dir=output_dir, adult_filter_off=True, force_replace=False, timeout=60, verbose=True)
     return images
 
@@ -28,7 +28,7 @@ def convert_to_jpg(images, keyword, output_dir):
 # monkey_images = download_images('Monkey', output_dir='dataset')
 # 
 # Download images for 'Rabbit'
-# rabbit_images = download_images('Rabbit', output_dir='dataset')
+rabbit_images = download_images('Rabbit', output_dir='q1/dataset')
 # 
 # Convert non-jpg images to jpg format
 # convert_to_jpg(monkey_images, 'Monkey', 'dataset')
@@ -36,49 +36,50 @@ def convert_to_jpg(images, keyword, output_dir):
 
 # Create dataset folder with two classes and corresponding labels
 
-monkey_images = []
-rabbit_images = []
-
-monkey_dir = 'dataset/Monkey'
-rabbit_dir = 'dataset/Rabbit'
-
+# monkey_images = []
+# rabbit_images = []
+# 
+# monkey_dir = 'dataset/Monkey'
+# rabbit_dir = 'dataset/Rabbit'
+# 
 # Load monkey images
-for filename in os.listdir(monkey_dir):
-    if filename.endswith('.jpg') or filename.endswith('.png'):
-        img = Image.open(os.path.join(monkey_dir, filename))
-        monkey_images.append(img)
-
+# for filename in os.listdir(monkey_dir):
+    # if filename.endswith('.jpg') or filename.endswith('.png'):
+        # img = Image.open(os.path.join(monkey_dir, filename))
+        # monkey_images.append(img)
+# 
 # Load rabbit images
-for filename in os.listdir(rabbit_dir):
-    if filename.endswith('.jpg') or filename.endswith('.png'):
-        img = Image.open(os.path.join(rabbit_dir, filename))
-        rabbit_images.append(img)
-
-
-
-
-dataset_dir = 'dataset'
-classes = ['Monkey', 'Rabbit']
-for cls in classes:
-    cls_dir = os.path.join(dataset_dir, cls)
-    if not os.path.exists(cls_dir):
-        os.makedirs(cls_dir)
+# for filename in os.listdir(rabbit_dir):
+    # if filename.endswith('.jpg') or filename.endswith('.png'):
+        # img = Image.open(os.path.join(rabbit_dir, filename))
+        # rabbit_images.append(img)
+# 
+# 
+# 
+# 
+# dataset_dir = 'dataset'
+# classes = ['Monkey', 'Rabbit']
+# for cls in classes:
+    # cls_dir = os.path.join(dataset_dir, cls)
+    # if not os.path.exists(cls_dir):
+        # os.makedirs(cls_dir)
 # Move downloaded images to corresponding class folders
-for img in monkey_images:
+# for img in monkey_images:
     # src = img['path']
-    dst = os.path.join(dataset_dir, 'Monkey', img)
-    os.rename(img, dst)
-
-for img in rabbit_images:
-    src = img['path']
-    dst = os.path.join(dataset_dir, 'Rabbit', img['filename'])
-    os.rename(src, dst)
-
+    # dst = os.path.join(dataset_dir, 'Monkey', img)
+    # os.rename(img, dst)
+# 
+# for img in rabbit_images:
+    # src = img['path']
+    # dst = os.path.join(dataset_dir, 'Rabbit', img['filename'])
+    # os.rename(src, dst)
+# 
 # Generate labels file
-with open(os.path.join(dataset_dir, 'labels.txt'), 'w') as f:
-    for img in monkey_images:
-        f.write(f"{img['filename']} Monkey\n")
-    for img in rabbit_images:
-        f.write(f"{img['filename']} Rabbit\n")
-
-print("Dataset creation completed.")
+# with open(os.path.join(dataset_dir, 'labels.txt'), 'w') as f:
+    # for img in monkey_images:
+        # f.write(f"{img['filename']} Monkey\n")
+    # for img in rabbit_images:
+        # f.write(f"{img['filename']} Rabbit\n")
+# 
+# print("Dataset creation completed.")
+# 
