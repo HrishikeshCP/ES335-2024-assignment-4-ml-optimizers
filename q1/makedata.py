@@ -13,7 +13,6 @@ for subdir in subdirs:
 	for labldir in labeldirs:
 		newdir = dataset_home + subdir + labldir
 		makedirs(newdir, exist_ok=True)
-
 # copy training dataset images into subdirectories
 src_directory = 'q1/dataset/'
 
