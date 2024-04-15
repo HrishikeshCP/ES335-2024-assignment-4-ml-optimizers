@@ -43,7 +43,7 @@ Training Loss
 
 <h1>Vgg16(all)</h1>
 <img src='vgg3/vgg3_imgset.jpg'>
-<!-- <img src='vgg3da/imgeval.jpg'> -->
+<img src='vgg3da/imgeval.jpg'>
 Accuracy_test
 <img src='vgg16/All_Accuracy_test.svg'>
 Accuracy_train
@@ -51,9 +51,9 @@ Accuracy_train
 Training Loss
 <img src='vgg16/All_Loss_train.svg'>
 
-<h1>Vgg16(all)</h1>
+<h1>Vgg16(unfreeze)</h1>
 <img src='vgg3/vgg3_imgset.jpg'>
-<!-- <img src='vgg3da/imgeval.jpg'> -->
+<img src='vgg3/imgeval.jpg'>
 Accuracy_test
 <img src='vgg16/Freeze_Accuracy_test.svg'>
 Accuracy_train
