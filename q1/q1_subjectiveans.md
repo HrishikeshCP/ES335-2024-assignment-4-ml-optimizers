@@ -41,6 +41,25 @@ Accuracy_train
 Training Loss
 <img src='vgg3da/Loss_train.svg'>
 
+<h1>Vgg16(all)</h1>
+<img src='vgg3/vgg3_imgset.jpg'>
+<!-- <img src='vgg3da/imgeval.jpg'> -->
+Accuracy_test
+<img src='vgg16/All_Accuracy_test.svg'>
+Accuracy_train
+<img src='vgg16/All_Accuracy_train.svg'>
+Training Loss
+<img src='vgg16/All_Loss_train.svg'>
+
+<h1>Vgg16(all)</h1>
+<img src='vgg3/vgg3_imgset.jpg'>
+<!-- <img src='vgg3da/imgeval.jpg'> -->
+Accuracy_test
+<img src='vgg16/Freeze_Accuracy_test.svg'>
+Accuracy_train
+<img src='vgg16/Freeze_Accuracy_train.svg'>
+Training Loss
+<img src='vgg16/Freeze_Loss_train.svg'>
 <h2>Questions</h2>
 
 - **Are the results as expected? Why or why not?**<br>
@@ -52,4 +71,5 @@ As we increase the no of epochs the model tends to overfit the training data. Th
 - **Are there any particular images that the model is confused about? Why or why not?**<br>
   Some images had rabbits of brown color similiar to monkeys these were among the images that got mis classified. 
 
-
+<h2>MLP vs VGG</h2>
+The accuracy received for MLP is lower than that of vgg models. VGG captures spatial features better than MLP which is important for image recognition.
